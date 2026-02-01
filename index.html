@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Paula Alvarez Tutoring | English & Spanish</title>
   <meta name="description" content="Bilingual tutoring (English/Spanish) for Early Childhood–5th Grade, Spanish enrichment through High School, and English support for multilingual learners." />
+
   <style>
     :root{
       --bg:#0b1220;
@@ -180,6 +181,7 @@
       text-decoration:none;
       transition:.2s;
       min-width: 170px;
+      cursor:pointer;
     }
     .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.08);}
     .btn.primary{
@@ -242,10 +244,7 @@
       align-items:start;
     }
 
-    form{
-      display:grid;
-      gap:10px;
-    }
+    form{display:grid; gap:10px;}
     label{font-size:13px;color:var(--muted)}
     input, textarea, select{
       width:100%;
@@ -296,13 +295,12 @@
       .hero{grid-template-columns: 1fr;}
       .grid{grid-template-columns: 1fr;}
       .two{grid-template-columns: 1fr;}
-      .reviews{grid-template-columns: 1fr;}
+      .reviews{grid-template-columns: 1 fr;}
       h1{font-size:36px;}
       .brand{min-width:auto}
       .links{display:none}
     }
 
-    /* Print-friendly */
     @media print{
       header{position:static;background:#fff;color:#000}
       body{background:#fff;color:#000}
@@ -318,10 +316,11 @@
         <div class="logo" aria-hidden="true">PA</div>
         <div>
           <div style="font-weight:800; letter-spacing:-.01em">Paula Alvarez Tutoring</div>
-          <small>Bilingual • English & Spanish</small>
+          <small>Bilingual • English &amp; Spanish</small>
         </div>
       </div>
       <nav class="links" aria-label="Primary">
+        <a href="#who">Who I Help</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#reviews">Reviews</a>
@@ -334,7 +333,7 @@
   <main>
     <section class="hero" id="top">
       <div class="card left">
-        <div class="badge"><span class="dot" aria-hidden="true"></span> Limited openings • Consistent weekly sessions available</div>
+        <div class="badge"><span class="dot" aria-hidden="true"></span> Lessons available Monday–Wednesday • Limited openings</div>
         <h1>Warm, structured tutoring that helps kids feel confident—and make real progress.</h1>
         <p class="sub">
           I’m Paula Alvarez, a certified teacher with 20+ years of experience. I support learners with clear routines,
@@ -342,11 +341,11 @@
         </p>
 
         <div class="pillrow" aria-label="Highlights">
-          <span class="pill">Early Childhood–5th Grade (All Subjects)</span>
-          <span class="pill">Reading & Phonics</span>
-          <span class="pill">Spanish Enrichment (EC–High School)</span>
-          <span class="pill">English Support for Multilingual Learners</span>
-          <span class="pill">Online or In-Person (SoCal)</span>
+          <span class="pill">👶🧩 Early Childhood–5th Grade (All Subjects)</span>
+          <span class="pill">🔤 Reading &amp; Phonics</span>
+          <span class="pill">🇪🇸 Spanish Enrichment (EC–High School)</span>
+          <span class="pill">💬 English Support for Multilingual Learners</span>
+          <span class="pill">🗓️ Mon–Wed • Limited Availability</span>
         </div>
 
         <div class="buttons">
@@ -359,7 +358,7 @@
       <aside class="card right" aria-label="Quick facts">
         <div class="mini">
           <h3>Experience</h3>
-          <p><strong>20+ years</strong> teaching & tutoring • Public, private, Montessori, online, homeschool</p>
+          <p><strong>20+ years</strong> teaching &amp; tutoring • Public, private, Montessori, online, homeschool</p>
         </div>
         <div class="mini">
           <h3>Languages</h3>
@@ -370,10 +369,34 @@
           <p>Kind + firm structure, explicit instruction, practice that builds independence</p>
         </div>
         <div class="mini">
-          <h3>What families get</h3>
-          <p>Clear goals, progress notes, and simple at-home steps</p>
+          <h3>Availability</h3>
+          <p><strong>Monday–Wednesday</strong> • Limited openings</p>
         </div>
       </aside>
+    </section>
+
+    <section id="who">
+      <div class="section-title">
+        <h2>Who I Help</h2>
+        <p>Support tailored to your child’s needs.</p>
+      </div>
+      <div class="grid">
+        <div class="card tile">
+          <h3>📖 Early Readers</h3>
+          <p>Children who need structured phonics instruction, decoding support, and confidence with reading.</p>
+        </div>
+        <div class="card tile">
+          <h3>🧠 Students Feeling Behind or Frustrated</h3>
+          <p>Patient, step-by-step teaching that rebuilds skills and restores confidence.</p>
+        </div>
+        <div class="card tile">
+          <h3>🌍 Bilingual &amp; Multilingual Families</h3>
+          <p>English or Spanish support that respects your child’s language background.</p>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:14px">
+        <strong>Limited availability:</strong> Lessons are currently available <strong>Monday–Wednesday</strong>. If you’re flexible, I can often find a consistent weekly time.
+      </div>
     </section>
 
     <section id="services">
@@ -383,7 +406,7 @@
       </div>
       <div class="grid">
         <div class="card tile">
-          <h3>Early Childhood–5th Grade Tutoring</h3>
+          <h3>🧩 Early Childhood–5th Grade Tutoring</h3>
           <p>All core subjects with support for organization, confidence, and study habits.</p>
           <ul>
             <li>Math, reading, writing, science, social studies</li>
@@ -392,16 +415,16 @@
           </ul>
         </div>
         <div class="card tile">
-          <h3>Reading & Phonics</h3>
+          <h3>🔤 Reading &amp; Phonics</h3>
           <p>Strong foundations for decoding, fluency, and comprehension.</p>
           <ul>
-            <li>Phonemic awareness & phonics</li>
-            <li>Vocabulary & comprehension strategies</li>
+            <li>Phonemic awareness &amp; phonics</li>
+            <li>Vocabulary &amp; comprehension strategies</li>
             <li>Writing connection (spelling, sentences, paragraphs)</li>
           </ul>
         </div>
         <div class="card tile">
-          <h3>Spanish Enrichment</h3>
+          <h3>🇪🇸 Spanish Enrichment</h3>
           <p>Early childhood through high school—fun, practical, and confidence-building.</p>
           <ul>
             <li>Conversation, vocabulary, and grammar</li>
@@ -412,7 +435,7 @@
       </div>
       <div class="two" style="margin-top:14px">
         <div class="card tile">
-          <h3>English Support (Multilingual Learners)</h3>
+          <h3>💬 English Support (Multilingual Learners)</h3>
           <p>English development that supports school success—without overwhelm.</p>
           <ul>
             <li>Listening/speaking confidence</li>
@@ -421,7 +444,7 @@
           </ul>
         </div>
         <div class="card tile">
-          <h3>Formats</h3>
+          <h3>🗓️ Formats</h3>
           <p>Flexible options for families.</p>
           <ul>
             <li>Online sessions (Zoom/Google Meet)</li>
@@ -507,7 +530,7 @@
               <textarea id="message" name="message" placeholder="Share what improved and what you appreciated…" required></textarea>
             </div>
             <button class="btn primary" type="submit">Submit review</button>
-            <div class="tiny">Note: This demo version stores reviews in the visitor’s browser (localStorage). For public reviews online, connect this form to Google Forms, Netlify Forms, or a simple database.</div>
+            <div class="tiny">Note: This version stores reviews in the visitor’s browser (localStorage). For public reviews online, connect this form to Google Forms, Netlify Forms, or a simple database.</div>
           </form>
         </div>
 
@@ -517,7 +540,7 @@
             <button class="btn" id="clearReviews" type="button" title="Clears reviews stored on this device">Clear (this device)</button>
           </div>
           <div id="reviewList" class="review-list" aria-live="polite"></div>
-          <div class="tiny" style="margin-top:10px">Want me to add real, public reviews? Tell me where you’re hosting (GitHub Pages / Netlify / Wix) and I’ll set it up.</div>
+          <div class="tiny" style="margin-top:10px">Want me to add real, public reviews? Tell me where you’re hosting (GitHub Pages / Netlify) and I’ll set it up.</div>
         </div>
       </div>
     </section>
@@ -565,13 +588,12 @@
     <footer>
       <div class="foot">
         <div>© <span id="year"></span> Paula Alvarez Tutoring</div>
-        <div class="tiny">Built as a single-page site • Works on phones • Easy to host on GitHub Pages/Netlify</div>
+        <div class="tiny">Built as a single-page site • Works on phones • Easy to host on GitHub Pages</div>
       </div>
     </footer>
   </main>
 
   <script>
-    // --- Simple review storage (local to the visitor's device) ---
     const STORAGE_KEY = "paula_tutoring_reviews_v1";
 
     function escapeHtml(str){
@@ -675,10 +697,7 @@
       }
     });
 
-    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Initial render
     renderReviews();
   </script>
 </body>
