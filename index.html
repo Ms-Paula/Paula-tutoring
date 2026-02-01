@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paula Alvarez Tutoring | English & Spanish</title>
+  <meta name="description" content="Bilingual tutoring (English/Spanish) for Early Childhood–5th Grade, Spanish enrichment through High School, and English support for multilingual learners." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#101a33;
+      --muted:#a9b3c7;
+      --text:#eef2ff;
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+      --ring:rgba(125,211,252,.35);
+      --shadow: 0 20px 50px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1100px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(167,139,250,.25), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(125,211,252,.18), transparent 55%),
+        radial-gradient(900px 700px at 50% 100%, rgba(34,197,94,.10), transparent 65%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+
+    a{color:inherit}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.65);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:220px;
+    }
+    .logo{
+      width:44px;height:44px;
+      border-radius:14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 12px 30px rgba(167,139,250,.18);
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      color:#09101e;
+    }
+    .brand small{color:var(--muted);display:block;margin-top:2px}
+
+    .links{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .links a{
+      text-decoration:none;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:12px;
+      transition:.2s;
+      border: 1px solid transparent;
+    }
+    .links a:hover{
+      color:var(--text);
+      border-color: rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(125,211,252,.18), rgba(167,139,250,.18));
+      border: 1px solid rgba(255,255,255,.10);
+      color:var(--text);
+      text-decoration:none;
+      box-shadow: 0 14px 35px rgba(0,0,0,.20);
+    }
+
+    main{max-width:var(--max); margin:0 auto; padding:30px 18px 64px;}
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:stretch;
+      margin-top:22px;
+    }
+
+    .card{
+      background: rgba(16,26,51,.75);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero .left{
+      padding:26px;
+      position:relative;
+      overflow:hidden;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      color:var(--muted);
+      font-size:14px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:99px;
+      background: radial-gradient(circle at 30% 30%, #34d399, #22c55e);
+      box-shadow: 0 0 0 6px rgba(34,197,94,.12);
+    }
+
+    h1{margin:14px 0 10px; font-size:42px; line-height:1.1; letter-spacing:-.02em;}
+    .sub{
+      margin:0 0 16px;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 56ch;
+    }
+
+    .pillrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin: 16px 0 20px;
+    }
+    .pill{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      font-size: 14px;
+    }
+
+    .buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      text-decoration:none;
+      transition:.2s;
+      min-width: 170px;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.08);}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(125,211,252,.20), rgba(167,139,250,.20));
+      border-color: rgba(255,255,255,.16);
+    }
+
+    .hero .right{padding:20px; display:flex; flex-direction:column; gap:14px;}
+    .mini{
+      padding:16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .mini h3{margin:0 0 6px; font-size:16px;}
+    .mini p{margin:0;color:var(--muted);font-size:14px;}
+    .mini strong{color:var(--text)}
+
+    section{margin-top:28px;}
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom: 14px;
+    }
+    .section-title h2{margin:0;font-size:24px;letter-spacing:-.01em;}
+    .section-title p{margin:0;color:var(--muted);}
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+
+    .tile{padding:18px;}
+    .tile h3{margin:0 0 8px; font-size:16px;}
+    .tile p{margin:0;color:var(--muted);font-size:14px;}
+
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+
+    ul{margin:10px 0 0; padding-left: 18px; color: var(--muted)}
+    li{margin:6px 0}
+
+    .callout{
+      padding:18px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, rgba(125,211,252,.10), rgba(167,139,250,.10));
+      border: 1px solid rgba(255,255,255,.10);
+    }
+
+    .reviews{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      align-items:start;
+    }
+
+    form{
+      display:grid;
+      gap:10px;
+    }
+    label{font-size:13px;color:var(--muted)}
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(6,10,20,.55);
+      color: var(--text);
+      outline: none;
+    }
+    input:focus, textarea:focus, select:focus{box-shadow: 0 0 0 5px var(--ring); border-color: rgba(125,211,252,.45)}
+    textarea{min-height:120px; resize:vertical}
+
+    .row{display:grid; grid-template-columns: 1fr 1fr; gap:10px;}
+
+    .review-list{display:grid; gap:10px;}
+    .review{
+      padding:14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .review-head{display:flex; justify-content:space-between; gap:10px; align-items:baseline;}
+    .review-name{font-weight:700}
+    .stars{font-size:14px; letter-spacing:1px}
+    .review-date{color:var(--muted); font-size:12px}
+    .review-text{margin:8px 0 0; color: var(--muted); white-space:pre-wrap}
+
+    .tiny{color:var(--muted); font-size:12px}
+
+    footer{
+      max-width:var(--max);
+      margin: 40px auto 0;
+      padding: 18px;
+      color: var(--muted);
+    }
+    footer .foot{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding-top: 16px;
+    }
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr;}
+      .grid{grid-template-columns: 1fr;}
+      .two{grid-template-columns: 1fr;}
+      .reviews{grid-template-columns: 1fr;}
+      h1{font-size:36px;}
+      .brand{min-width:auto}
+      .links{display:none}
+    }
+
+    /* Print-friendly */
+    @media print{
+      header{position:static;background:#fff;color:#000}
+      body{background:#fff;color:#000}
+      .card{box-shadow:none}
+      a{color:#000}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">PA</div>
+        <div>
+          <div style="font-weight:800; letter-spacing:-.01em">Paula Alvarez Tutoring</div>
+          <small>Bilingual • English & Spanish</small>
+        </div>
+      </div>
+      <nav class="links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="cta" href="#contact">Get Started ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="card left">
+        <div class="badge"><span class="dot" aria-hidden="true"></span> Limited openings • Consistent weekly sessions available</div>
+        <h1>Warm, structured tutoring that helps kids feel confident—and make real progress.</h1>
+        <p class="sub">
+          I’m Paula Alvarez, a certified teacher with 20+ years of experience. I support learners with clear routines,
+          strong foundations, and encouragement—so families see growth without the stress.
+        </p>
+
+        <div class="pillrow" aria-label="Highlights">
+          <span class="pill">Early Childhood–5th Grade (All Subjects)</span>
+          <span class="pill">Reading & Phonics</span>
+          <span class="pill">Spanish Enrichment (EC–High School)</span>
+          <span class="pill">English Support for Multilingual Learners</span>
+          <span class="pill">Online or In-Person (SoCal)</span>
+        </div>
+
+        <div class="buttons">
+          <a class="btn primary" href="#contact">Request availability</a>
+          <a class="btn" href="#services">See services</a>
+          <a class="btn" href="#reviews">Read reviews</a>
+        </div>
+      </div>
+
+      <aside class="card right" aria-label="Quick facts">
+        <div class="mini">
+          <h3>Experience</h3>
+          <p><strong>20+ years</strong> teaching & tutoring • Public, private, Montessori, online, homeschool</p>
+        </div>
+        <div class="mini">
+          <h3>Languages</h3>
+          <p><strong>English</strong> • <strong>Español</strong> • Italiano</p>
+        </div>
+        <div class="mini">
+          <h3>Approach</h3>
+          <p>Kind + firm structure, explicit instruction, practice that builds independence</p>
+        </div>
+        <div class="mini">
+          <h3>What families get</h3>
+          <p>Clear goals, progress notes, and simple at-home steps</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="services">
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>Choose what fits your child right now.</p>
+      </div>
+      <div class="grid">
+        <div class="card tile">
+          <h3>Early Childhood–5th Grade Tutoring</h3>
+          <p>All core subjects with support for organization, confidence, and study habits.</p>
+          <ul>
+            <li>Math, reading, writing, science, social studies</li>
+            <li>Homework support + reteaching</li>
+            <li>Enrichment or intervention</li>
+          </ul>
+        </div>
+        <div class="card tile">
+          <h3>Reading & Phonics</h3>
+          <p>Strong foundations for decoding, fluency, and comprehension.</p>
+          <ul>
+            <li>Phonemic awareness & phonics</li>
+            <li>Vocabulary & comprehension strategies</li>
+            <li>Writing connection (spelling, sentences, paragraphs)</li>
+          </ul>
+        </div>
+        <div class="card tile">
+          <h3>Spanish Enrichment</h3>
+          <p>Early childhood through high school—fun, practical, and confidence-building.</p>
+          <ul>
+            <li>Conversation, vocabulary, and grammar</li>
+            <li>Homework help + class support</li>
+            <li>Games, stories, and real-life topics</li>
+          </ul>
+        </div>
+      </div>
+      <div class="two" style="margin-top:14px">
+        <div class="card tile">
+          <h3>English Support (Multilingual Learners)</h3>
+          <p>English development that supports school success—without overwhelm.</p>
+          <ul>
+            <li>Listening/speaking confidence</li>
+            <li>Academic vocabulary and reading support</li>
+            <li>Writing help with clear sentence frames</li>
+          </ul>
+        </div>
+        <div class="card tile">
+          <h3>Formats</h3>
+          <p>Flexible options for families.</p>
+          <ul>
+            <li>Online sessions (Zoom/Google Meet)</li>
+            <li>In-person sessions (Southern California)</li>
+            <li>1:1 or small-group (siblings or same grade)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <h2>About Paula</h2>
+        <p>Certified teacher • 20+ years • Bilingual instruction</p>
+      </div>
+      <div class="card" style="padding:18px">
+        <div class="two">
+          <div>
+            <div class="callout">
+              <strong>My goal is simple:</strong> help your child feel capable and supported while we build skills that last.
+            </div>
+            <p style="color:var(--muted); margin-top:12px">
+              With experience across public, private, Montessori, online, and homeschool settings, I tailor sessions to your
+              child’s needs and learning style. I’m certified for early childhood through 6th grade and Spanish across grade
+              levels.
+            </p>
+            <ul>
+              <li>Clear routines that reduce frustration</li>
+              <li>Explicit instruction + guided practice</li>
+              <li>Encouraging feedback that motivates</li>
+            </ul>
+          </div>
+          <div>
+            <div class="mini" style="margin-bottom:10px">
+              <h3>Best for families who want…</h3>
+              <p>Consistency, calm support, and measurable progress</p>
+            </div>
+            <div class="mini" style="margin-bottom:10px">
+              <h3>Typical outcomes</h3>
+              <p>Better confidence, stronger reading/math skills, smoother homework routines</p>
+            </div>
+            <div class="mini">
+              <h3>What I can share</h3>
+              <p>Progress notes and a simple plan for practice between sessions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="section-title">
+        <h2>Parent Reviews</h2>
+        <p>Families can leave a review below.</p>
+      </div>
+
+      <div class="reviews">
+        <div class="card" style="padding:18px">
+          <h3 style="margin:0 0 10px">Leave a review</h3>
+          <form id="reviewForm" autocomplete="on">
+            <div class="row">
+              <div>
+                <label for="name">Parent/Guardian name</label>
+                <input id="name" name="name" placeholder="e.g., Maria G." required />
+              </div>
+              <div>
+                <label for="rating">Rating</label>
+                <select id="rating" name="rating" required>
+                  <option value="5">★★★★★ (5)</option>
+                  <option value="4">★★★★☆ (4)</option>
+                  <option value="3">★★★☆☆ (3)</option>
+                  <option value="2">★★☆☆☆ (2)</option>
+                  <option value="1">★☆☆☆☆ (1)</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="student">Student (optional)</label>
+              <input id="student" name="student" placeholder="e.g., 3rd grade" />
+            </div>
+            <div>
+              <label for="message">Review</label>
+              <textarea id="message" name="message" placeholder="Share what improved and what you appreciated…" required></textarea>
+            </div>
+            <button class="btn primary" type="submit">Submit review</button>
+            <div class="tiny">Note: This demo version stores reviews in the visitor’s browser (localStorage). For public reviews online, connect this form to Google Forms, Netlify Forms, or a simple database.</div>
+          </form>
+        </div>
+
+        <div class="card" style="padding:18px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px">
+            <h3 style="margin:0 0 10px">Recent reviews</h3>
+            <button class="btn" id="clearReviews" type="button" title="Clears reviews stored on this device">Clear (this device)</button>
+          </div>
+          <div id="reviewList" class="review-list" aria-live="polite"></div>
+          <div class="tiny" style="margin-top:10px">Want me to add real, public reviews? Tell me where you’re hosting (GitHub Pages / Netlify / Wix) and I’ll set it up.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>Replace the placeholders with your info.</p>
+      </div>
+      <div class="card" style="padding:18px">
+        <div class="two">
+          <div>
+            <h3 style="margin:0 0 8px">Request availability</h3>
+            <p style="margin:0;color:var(--muted)">
+              Send a message with your child’s grade, goals, and preferred schedule.
+            </p>
+            <div class="pillrow" style="margin-top:12px">
+              <span class="pill">📍 Serving: Aliso Viejo • Lake Forest • Irvine (and online)</span>
+              <span class="pill">⏱ Typical sessions: 45–60 minutes</span>
+            </div>
+            <div class="mini" style="margin-top:10px">
+              <h3>Contact details</h3>
+              <p><strong>Email:</strong> yourname@email.com<br>
+                 <strong>Phone/Text:</strong> (000) 000-0000<br>
+                 <strong>Instagram:</strong> @yourhandle</p>
+            </div>
+          </div>
+          <div>
+            <div class="callout">
+              <strong>Quick note for parents:</strong>
+              Consistent sessions help students grow faster. If you need a one-time “catch-up” session, I can do that too—just let me know.
+            </div>
+            <p class="tiny" style="margin-top:12px">
+              Tip: If you publish this website, you can replace the contact section with a simple Google Form for inquiries.
+            </p>
+            <div class="buttons" style="margin-top:10px">
+              <a class="btn primary" href="#top">Back to top</a>
+              <a class="btn" href="#services">Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot">
+        <div>© <span id="year"></span> Paula Alvarez Tutoring</div>
+        <div class="tiny">Built as a single-page site • Works on phones • Easy to host on GitHub Pages/Netlify</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // --- Simple review storage (local to the visitor's device) ---
+    const STORAGE_KEY = "paula_tutoring_reviews_v1";
+
+    function escapeHtml(str){
+      return String(str)
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+    }
+
+    function stars(n){
+      const full = "★★★★★".slice(0, n);
+      const empty = "☆☆☆☆☆".slice(0, 5 - n);
+      return full + empty;
+    }
+
+    function loadReviews(){
+      try{
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if(!raw) return [];
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed) ? parsed : [];
+      }catch{ return []; }
+    }
+
+    function saveReviews(list){
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+    }
+
+    function renderReviews(){
+      const el = document.getElementById("reviewList");
+      const list = loadReviews().sort((a,b)=> (b.time||0) - (a.time||0));
+
+      if(list.length === 0){
+        el.innerHTML = `
+          <div class="review">
+            <div class="review-head">
+              <div>
+                <div class="review-name">Be the first to leave a review</div>
+                <div class="review-date">—</div>
+              </div>
+              <div class="stars" aria-label="No rating yet">☆☆☆☆☆</div>
+            </div>
+            <p class="review-text">Your feedback helps other families feel confident choosing a tutor.</p>
+          </div>
+        `;
+        return;
+      }
+
+      el.innerHTML = list.map(r => {
+        const d = new Date(r.time || Date.now());
+        const date = d.toLocaleDateString(undefined, { year:"numeric", month:"short", day:"numeric"});
+        const student = r.student ? ` • <span class="tiny">${escapeHtml(r.student)}</span>` : "";
+        return `
+          <article class="review">
+            <div class="review-head">
+              <div>
+                <div class="review-name">${escapeHtml(r.name)}${student}</div>
+                <div class="review-date">${date}</div>
+              </div>
+              <div class="stars" aria-label="${r.rating} out of 5">${stars(Number(r.rating)||5)}</div>
+            </div>
+            <p class="review-text">${escapeHtml(r.message)}</p>
+          </article>
+        `;
+      }).join("");
+    }
+
+    document.getElementById("reviewForm").addEventListener("submit", (e)=>{
+      e.preventDefault();
+      const form = e.currentTarget;
+      const data = new FormData(form);
+
+      const review = {
+        name: String(data.get("name")||"").trim(),
+        rating: Number(data.get("rating")||5),
+        student: String(data.get("student")||"").trim(),
+        message: String(data.get("message")||"").trim(),
+        time: Date.now()
+      };
+
+      if(!review.name || !review.message){
+        alert("Please include your name and a review message.");
+        return;
+      }
+
+      const list = loadReviews();
+      list.push(review);
+      saveReviews(list);
+      form.reset();
+      document.getElementById("rating").value = "5";
+      renderReviews();
+      alert("Thank you! Your review was saved on this device.");
+    });
+
+    document.getElementById("clearReviews").addEventListener("click", ()=>{
+      if(confirm("Clear reviews stored on this device?")){
+        localStorage.removeItem(STORAGE_KEY);
+        renderReviews();
+      }
+    });
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Initial render
+    renderReviews();
+  </script>
+</body>
+</html>
